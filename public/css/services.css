@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif; /* Example: Replace with your chosen font */
+  background-color: #190019; /* Assuming this is the overall page background */
+  color: #fbe4d8;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* what i do section start */
+
+.what-i-do-section {
+  padding: 60px 20px;
+  background-color: #190019; /* Main section background */
+  font-family: sans-serif; /* Default sans-serif, replace */
+}
+
+.what-i-do-section__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.what-i-do-section__main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8; /* Bright white for title */
+}
+
+.what-i-do-section__title-underline {
+  width: 170px; /* Adjust as needed */
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto;
+  border-radius: 2px;
+}
+
+.what-i-do-section__cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; /* Make cards same height */
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.responsibility-card-item {
+  background-color: #4f064fb5; /* Card background */
+  padding: 30px 25px;
+  border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 280px;
+  max-width: 380px;
+  box-shadow: 0 5px 15px #4f064f4a;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.responsibility-card-item__title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fbe4d8;
+  margin-bottom: 25px; /* Increased space below title */
+  text-align: center;
+  line-height: 1.3; /* For two-line titles */
+}
+
+.responsibility-card-item__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: auto; /* Pushes list down if card stretches */
+}
+
+.responsibility-card-item__list-item {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 15px; /* Increased space between list items */
+  padding-left: 20px;
+  position: relative;
+}
+.responsibility-card-item__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.responsibility-card-item__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px; /* Adjust for vertical alignment */
+  width: 8px;
+  height: 8px;
+  background-color: #ffb400;
+  border-radius: 50%;
+}
+
+/* Animation classes (reusable generic class) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggering animation for these cards */
+.what-i-do-section
+  .responsibility-card-item.animate-on-scroll:nth-child(1).is-visible {
+  transition-delay: 0.1s;
+}
+.what-i-do-section
+  .responsibility-card-item.animate-on-scroll:nth-child(2).is-visible {
+  transition-delay: 0.25s;
+}
+.what-i-do-section
+  .responsibility-card-item.animate-on-scroll:nth-child(3).is-visible {
+  transition-delay: 0.4s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  /* Tablet */
+  .what-i-do-section__cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .what-i-do-section__title-underline {
+    width: 125px;
+  }
+  .what-i-do-section__main-title {
+    font-size: 2em;
+  }
+  .what-i-do-section__cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .responsibility-card-item {
+    width: 100%;
+    max-width: 450px;
+  }
+  .responsibility-card-item__title {
+    font-size: 1.6em;
+  }
+  .responsibility-card-item__list-item {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-i-do-section {
+    padding: 40px 15px;
+  }
+  .what-i-do-section__main-title {
+    font-size: 1.8em;
+  }
+}
+/* what i do section end */
+
+/* Pricing Section starts */
+
+.pricing-section {
+  padding: 60px 20px;
+  background-color: #190019; /* Main section background */
+  font-family: sans-serif; /* Default sans-serif, replace */
+}
+
+.pricing-section__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-section__main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8; /* Bright white for title */
+}
+
+.pricing-section__title-underline {
+  width: 130px; /* Adjust as needed */
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto;
+  border-radius: 2px;
+}
+
+.pricing-section__cards-container {
+  display: flex;
+  justify-content: space-around; /* Or space-between */
+  align-items: stretch; /* Make cards same height */
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px; /* Space before hourly rate bar */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-card {
+  background-color: #4f064fb5; /* Card background */
+  padding: 30px 25px;
+  border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 280px;
+  max-width: 380px; /* Consistent max width for cards */
+  box-shadow: 0 5px 15px #4f064f5e;
+  display: flex;
+  flex-direction: column; /* Stack title and list */
+}
+
+.pricing-card__title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fbe4d8;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.pricing-card__features-list {
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1; /* Allows list to take space, pushing price to bottom if card stretches */
+  text-align: center;
+}
+
+.pricing-card__features-list li {
+  font-size: 0.9em;
+  line-height: 1.8; /* Increased line height for readability */
+  color: #fff;
+  margin-bottom: 10px;
+}
+.pricing-card__features-list li strong {
+  font-weight: 600;
+  color: #ffb300; /* Slightly brighter for labels */
+}
+
+.pricing-card__price {
+  margin-top: auto; /* Pushes price to the bottom of the card */
+  padding-top: 15px; /* Space above price line */
+  border-top: 1px solid #ffffff1a; /* Subtle separator */
+  text-align: center;
+}
+.pricing-card__price strong {
+  font-size: 1.1em; /* Make price text slightly larger */
+  color: #ffffff;
+}
+
+.pricing-section__hourly-rate-bar {
+  background-color: #22153f; /* Distinct background for hourly rate */
+  color: #ede7f6;
+  padding: 15px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  max-width: 400px; /* Constrain width of this bar */
+  margin: 0 auto; /* Center it */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.pricing-section__hourly-rate-bar p {
+  margin: 0;
+}
+
+/* Animation classes (reusable generic class) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggering animation for pricing cards and hourly bar */
+.pricing-section .pricing-card.animate-on-scroll:nth-child(1).is-visible {
+  transition-delay: 0.1s;
+}
+.pricing-section .pricing-card.animate-on-scroll:nth-child(2).is-visible {
+  transition-delay: 0.25s;
+}
+.pricing-section .pricing-card.animate-on-scroll:nth-child(3).is-visible {
+  transition-delay: 0.4s;
+}
+.pricing-section
+  .pricing-section__hourly-rate-bar.animate-on-scroll.is-visible {
+  transition-delay: 0.55s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  /* Tablet */
+  .pricing-section__cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .pricing-section__main-title {
+    font-size: 2em;
+  }
+  .pricing-section__title-underline {
+    width: 95px;
+  }
+  .pricing-section__cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .pricing-card {
+    width: 100%;
+    max-width: 450px; /* Max width for stacked cards */
+  }
+  .pricing-card__title {
+    font-size: 1.6em;
+  }
+  .pricing-card__features-list li {
+    font-size: 0.85em;
+  }
+  .pricing-section__hourly-rate-bar {
+    font-size: 1em;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 40px 15px;
+  }
+  .pricing-section__main-title {
+    font-size: 1.8em;
+  }
+}
+/* Pricing Section ends */

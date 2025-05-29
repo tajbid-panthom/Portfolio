@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="./index.html" class="site-header__logo-link">
+            Taj<span class="site-header__logo-dev">DEV</span
+            ><span class="site-header__logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="site-header__nav" id="main-nav">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a href="./index.html" class="site-header__nav-link">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./about.html" class="site-header__nav-link">About</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./portfolio.html" class="site-header__nav-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./services.html" class="site-header__nav-link"
+                >Services</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./contact.html" class="site-header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="site-header__mobile-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--open"
+            >☰</span
+          >
+          <!-- Hamburger -->
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--close"
+            style="display: none"
+            >×</span
+          >
+          <!-- Close icon -->
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar end -->
+
+    <!-- Section hero Start -->
+
+    <section class="hero-section" id="index">
+      <div class="hero-section__image-area hero-animate-element">
+        <div class="hero-section__image-wrapper">
+          <img
+            src="./public/images/tajbid.jpeg"
+            alt="Md Tajbid Hossain Bappi"
+            class="hero-section__image"
+          />
+        </div>
+      </div>
+      <div class="hero-section__content hero-animate-element">
+        <p class="hero-section__greeting">
+          Hi, I am
+          <span class="hero-section__name">Md Tajbid Hossain Bappi</span>
+        </p>
+        <h1 class="hero-section__title">MERN Stack Web<br />Developer</h1>
+        <p class="hero-section__description">
+          Specialized in building full-stack web applications using MongoDB,
+          Express.js, React.js, and Node.js. Skilled in both frontend and
+          backend development with a strong command of JavaScript. Experienced
+          in creating dynamic, responsive interfaces and robust server-side
+          functionality. Also well-versed in UI/UX design, ensuring
+          user-friendly and visually appealing digital experiences.
+        </p>
+        <a href="#contact" class="hero-section__cta-button">Contact Me</a>
+      </div>
+    </section>
+    <!-- Section hero End -->
+
+    <!-- Section skills and experience Start -->
+    <section class="skills-experience" id="index">
+      <div class="skills-experience__header">
+        <h2 class="skills-experience__title">Skills & Experience</h2>
+        <div class="skills-experience__title-underline"></div>
+      </div>
+      <p class="skills-experience__intro">
+        Proficient in full-stack development using the MERN stack with strong
+        expertise in JavaScript. Skilled in creating responsive web interfaces
+        and intuitive user experiences with solid UI/UX design knowledge.
+      </p>
+
+      <div class="skills-experience__cards-container">
+        <div class="skill-card">
+          <h3 class="skill-card__title">Frontend</h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__list-item">
+              React.js, HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS
+            </li>
+            <li class="skill-card__list-item">
+              Experience building responsive and dynamic user interfaces
+            </li>
+            <li class="skill-card__list-item">
+              Familiar with component-based architecture and state management
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card__title">Backend</h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__list-item">
+              Node.js, Express.js, MongoDB, MySQL, RESTful APIs
+            </li>
+            <li class="skill-card__list-item">
+              Hands-on experience in server-side logic, authentication, and
+              database integration
+            </li>
+            <li class="skill-card__list-item">
+              Comfortable working with MVC architecture and middleware
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card__title">UI/UX Design</h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__list-item">
+              Figma, Adobe XD, Wireframing, Prototyping
+            </li>
+            <li class="skill-card__list-item">
+              Focus on clean, user-friendly designs and intuitive user journeys
+            </li>
+            <li class="skill-card__list-item">
+              Experience collaborating with teams to turn ideas into interactive
+              interfaces
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Section skills and experience end -->
+
+    <!-- Selected Works start -->
+    <section class="selected-works" id="index">
+      <div class="selected-works__header">
+        <h2 class="selected-works__title">Selected Works</h2>
+        <div class="selected-works__title-underline"></div>
+      </div>
+      <p class="selected-works__intro">
+        Built full-stack web applications ranging from event management and
+        scheduling systems to e-learning platforms and social media features.
+      </p>
+
+      <div class="selected-works__grid">
+        <div class="portfolio-item">
+          <a
+            href="#"
+            class="portfolio-item__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="portfolio-item__image-wrapper">
+              <img
+                src="./public/images/kucc.png"
+                alt="Khulna University Career Club Management System"
+                class="portfolio-item__image"
+              />
+              <!-- Optional: Add an overlay for hover effects here -->
+            </div>
+          </a>
+          <h3 class="portfolio-item__project-title">KUCC_MANAGEMENT_SYSTEM</h3>
+        </div>
+
+        <div class="portfolio-item">
+          <a
+            href="#"
+            class="portfolio-item__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="portfolio-item__image-wrapper">
+              <img
+                src="./public/images/routine.png"
+                alt="Automated Routine Generator"
+                class="portfolio-item__image"
+              />
+            </div>
+          </a>
+          <h3 class="portfolio-item__project-title">ROUTINE GENERATOR</h3>
+        </div>
+
+        <div class="portfolio-item">
+          <a
+            href="#"
+            class="portfolio-item__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="portfolio-item__image-wrapper">
+              <img
+                src="./public/images/insta.png"
+                alt="Instagram Clone"
+                class="portfolio-item__image"
+              />
+            </div>
+          </a>
+          <h3 class="portfolio-item__project-title">INSTAGRAM_CLONE</h3>
+        </div>
+
+        <div class="portfolio-item">
+          <a
+            href="#"
+            class="portfolio-item__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="portfolio-item__image-wrapper">
+              <img
+                src="./public/images/lms.png"
+                alt="LMS Learning Platform"
+                class="portfolio-item__image"
+              />
+            </div>
+          </a>
+          <h3 class="portfolio-item__project-title">LMS_Learning</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Works end -->
+
+    <!-- section What I do Start -->
+    <section class="what-i-do" id="index">
+      <div class="what-i-do__header">
+        <h2 class="what-i-do__title">What I do</h2>
+        <div class="what-i-do__title-underline"></div>
+      </div>
+
+      <div class="what-i-do__cards-container">
+        <div class="responsibility-card">
+          <h3 class="responsibility-card__title">
+            Frontend<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card__list">
+            <li class="responsibility-card__list-item">
+              Design and build user interfaces with HTML, CSS, and JavaScript
+              frameworks like React.js
+            </li>
+            <li class="responsibility-card__list-item">
+              Ensure responsive and interactive designs across all devices
+            </li>
+            <li class="responsibility-card__list-item">
+              Work with APIs to fetch and display data dynamically
+            </li>
+          </ul>
+        </div>
+
+        <div class="responsibility-card">
+          <h3 class="responsibility-card__title">
+            Backend<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card__list">
+            <li class="responsibility-card__list-item">
+              Develop server-side logic using languages like Node.js
+            </li>
+            <li class="responsibility-card__list-item">
+              Design and manage databases (e.g., MongoDB, MySQL)
+            </li>
+            <li class="responsibility-card__list-item">
+              Create and secure RESTful APIs, handle authentication, and manage
+              user sessions
+            </li>
+          </ul>
+        </div>
+
+        <div class="responsibility-card">
+          <h3 class="responsibility-card__title">
+            UI/UX Design<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card__list">
+            <li class="responsibility-card__list-item">
+              Understand user needs, behaviors, and pain points through
+              research, surveys, and usability testing.
+            </li>
+            <li class="responsibility-card__list-item">
+              Create wire-frames, mock-ups, and interactive prototypes to
+              visualize user journeys and interface layout.
+            </li>
+            <li class="responsibility-card__list-item">
+              Develop visually appealing, user-friendly designs that enhance
+              usability.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- section What I do end -->
+
+    <!-- Testimonial Start -->
+    <section class="testimonial-section" id="index">
+      <div class="testimonial-section__header">
+        <h2 class="testimonial-section__title">Testimonial</h2>
+        <div class="testimonial-section__title-underline"></div>
+      </div>
+
+      <div class="testimonial-section__cards-container">
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote-icon">“</div>
+          <blockquote class="testimonial-card__text">
+            Tajbid has shown strong expertise in full-stack development using
+            the MERN stack. He consistently delivered clean, functional code
+            with thoughtful design. A reliable and technically sound developer.
+          </blockquote>
+          <footer class="testimonial-card__author">
+            <p class="testimonial-card__author-name">Md Aminul Islam,</p>
+            <p class="testimonial-card__author-title">Assistant Professor,</p>
+            <p class="testimonial-card__author-affiliation">
+              Khulna University
+            </p>
+          </footer>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote-icon">“</div>
+          <blockquote class="testimonial-card__text">
+            I've seen tajbid excel in both frontend and backend development. His
+            ability to connect user experience with strong logic is impressive.
+            Truly a well-rounded developer.
+          </blockquote>
+          <footer class="testimonial-card__author">
+            <p class="testimonial-card__author-name">Atanu Shome,</p>
+            <p class="testimonial-card__author-title">Assistant Professor,</p>
+            <p class="testimonial-card__author-affiliation">
+              Khulna University
+            </p>
+          </footer>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote-icon">“</div>
+          <blockquote class="testimonial-card__text">
+            tajbid displayed excellent command over modern frameworks like React
+            and Node.js. He approaches challenges with creativity and
+            confidence. A standout student in my class.
+          </blockquote>
+          <footer class="testimonial-card__author">
+            <p class="testimonial-card__author-name">Sajib Chatterjee,</p>
+            <p class="testimonial-card__author-title">Lecturer,</p>
+            <p class="testimonial-card__author-affiliation">
+              Khulna University
+            </p>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial end -->
+
+    <!-- Contact footer Start -->
+    <div id="contact-footer"></div>
+    <!-- Contact footer end -->
+
+    <!-- Footer Start  -->
+    <div id="footer"></div>
+    <!-- Footer end -->
+
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>

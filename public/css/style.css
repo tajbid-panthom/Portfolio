@@ -1,0 +1,1159 @@
+/* It's good practice to have this at the top of your CSS or in a reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* You can set your body font and background here if this is the main page background */
+
+body {
+  font-family: "Poppins", sans-serif; /* Example: Replace with your chosen font */
+  background-color: #190019; /* Assuming this is the overall page background */
+  color: #fbe4d8;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Section start */
+
+.site-header {
+  background-color: #190019; /* Dark background */
+  font-family: sans-serif; /* Fallback font, replace with your chosen font */
+  position: sticky; /* Makes the navbar stick to the top on scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it's above other content */
+  box-shadow: 0 2px 5px rgba(255, 254, 254, 0.281); /* Subtle shadow for depth */
+  padding: 15px 0; /* Vertical padding for the header itself */
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Or your preferred content width */
+  margin: 0 auto;
+  padding: 0 20px; /* Horizontal padding for content within the header */
+}
+
+.site-header__logo-link {
+  text-decoration: none;
+  color: #fbe4d8; /* White color for "Taj" */
+  font-size: 1.8em; /* Adjust size as needed */
+  font-weight: 600; /* Adjust weight as needed for "Taj" */
+  display: flex;
+  align-items: baseline;
+}
+
+.site-header__logo-dev {
+  font-weight: 800; /* Bolder for "DEV" */
+  color: #fbe4d8; /* White color */
+}
+
+.site-header__logo-dot {
+  color: #ffb300; /* Yellow accent color for the dot */
+  font-size: 2.2em; /* Making dot slightly larger */
+  line-height: 0; /* Fine-tune vertical alignment */
+  margin-left: 1px;
+}
+
+.site-header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Space between nav items, adjust as needed */
+  margin: 0;
+  padding: 0;
+}
+
+.site-header__nav-link {
+  text-decoration: none;
+  color: #fbe4d8; /* Light lavender/off-white for nav links */
+  font-size: 1em; /* Adjust size as needed */
+  font-weight: 500; /* Adjust weight as needed */
+  padding: 8px 5px; /* Padding for better click area and underline space */
+  position: relative; /* For the pseudo-element underline */
+  transition: color 0.3s ease;
+}
+
+.site-header__nav-link:hover {
+  color: #ffb300; /* Yellow accent on hover */
+}
+
+.site-header__nav-link--active {
+  color: #fff; /* Active link might be brighter or same as hover */
+  font-weight: 600; /* Optional: make active link bolder */
+}
+
+.site-header__nav-link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px; /* Position the underline just below the text */
+  left: 0;
+  width: 100%;
+  height: 2.5px; /* Thickness of the underline */
+  background-color: #fff; /* Underline color, can also be #FFBF00 */
+  border-radius: 1px;
+}
+
+/* Mobile Menu Styles */
+.site-header__mobile-toggle {
+  display: none; /* Hidden by default, shown on small screens */
+  background: none;
+  border: none;
+  color: #fbe4d8;
+  font-size: 1.8em; /* Hamburger icon size */
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1; /* Prevent extra space */
+}
+.site-header__nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px; /* optional for spacing */
+  color: #fbe4d8; /* Optional: make it stand out */
+}
+
+@media (max-width: 768px) {
+  .site-header__nav {
+    display: none; /* Hide nav by default on mobile */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    width: 100%;
+    background-color: #190019; /* Slightly different or same as header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+
+  .site-header__nav.is-active {
+    display: block; /* Show when active */
+  }
+
+  .site-header__nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .site-header__nav-item {
+    width: 100%;
+  }
+
+  .site-header__nav-link {
+    display: block; /* Make links take full width for easier tapping */
+    padding: 12px 20px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+  }
+  .site-header__nav-item:last-child .site-header__nav-link {
+    border-bottom: none;
+  }
+
+  .site-header__nav-link--active::after {
+    /* Adjust or remove underline for mobile if desired */
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%; /* Shorter underline for mobile active state */
+    height: 2px;
+  }
+
+  .site-header__mobile-toggle {
+    display: block; /* Show hamburger icon */
+  }
+}
+
+/* Navbar Section end */
+
+/* Hero Section Start */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px 40px; /* Increased top/bottom padding for hero */
+  background-color: #190019;
+  font-family: sans-serif; /* Fallback font, replace */
+  min-height: 90vh; /* Ensure it takes up a good portion of the viewport */
+  overflow: hidden; /* To contain decorative elements and animations */
+}
+
+.hero-section__image-area {
+  position: relative;
+  padding: 15px; /* Space for the L-shapes */
+}
+
+/* L-shape decorative elements */
+.hero-section__image-area::before,
+.hero-section__image-area::after {
+  content: "";
+  position: absolute;
+  /* Sizing based on the image-wrapper's dimensions, adjust if image-wrapper size changes */
+  /* These percentages target the padded area, not the image-wrapper directly */
+  width: calc(
+    100% - 30px
+  ); /* Full width of the padded area minus padding on both sides */
+  height: calc(
+    100% - 30px
+  ); /* Full height of the padded area minus padding on both sides */
+  border-style: solid;
+  border-color: #ffb300; /* Yellow accent */
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+.hero-section__image-area::before {
+  top: 0;
+  left: 0;
+  border-top-width: 8px;
+  border-left-width: 8px;
+  width: 60%; /* Extent of L-shape */
+  height: 50%; /* Extent of L-shape */
+}
+
+.hero-section__image-area::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 8px;
+  border-right-width: 8px;
+  width: 60%; /* Extent of L-shape */
+  height: 50%; /* Extent of L-shape */
+}
+
+.hero-section__image-wrapper {
+  background-color: #f8f9fa; /* Light background for the image */
+  padding: 6px; /* Creates the thin light border effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 300px; /* Adjust to your image */
+  height: auto; /* Or fixed height if image is cropped */
+}
+
+.hero-section__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-section__content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-section__greeting {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.hero-section__name {
+  color: #ffb300;
+  font-weight: 700;
+}
+
+.hero-section__title {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fbe4d8;
+}
+
+.hero-section__description {
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #d1c4e9;
+}
+
+.hero-section__cta-button {
+  background-color: #ffbf00;
+  color: #1c1131;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* For <a> tag */
+  display: inline-block; /* For proper padding on <a> tag */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 191, 0, 0.3);
+}
+
+.hero-section__cta-button:hover {
+  background-color: #e6ac00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 191, 0, 0.4);
+}
+
+/* Animation states for JavaScript */
+.hero-animate-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.hero-animate-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger animation for content if desired */
+.hero-section__content.is-visible {
+  transition-delay: 0.2s; /* Content appears slightly after image */
+}
+
+/* Responsive Adjustments (Mobile View) */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px; /* Adjust padding for mobile */
+    gap: 30px;
+    min-height: 0; /* Allow height to be determined by content on mobile */
+  }
+
+  .hero-section__image-area::before,
+  .hero-section__image-area::after {
+    width: 50%;
+    height: 40%;
+  }
+
+  .hero-section__image-wrapper {
+    width: 250px; /* Smaller image on tablets */
+    margin: 0 auto; /* Center image when stacked */
+  }
+
+  .hero-section__title {
+    font-size: 2.2em;
+  }
+
+  .hero-section__greeting {
+    font-size: 1.2em;
+  }
+
+  .hero-section__description {
+    font-size: 0.95em;
+  }
+
+  .hero-section__cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section__image-wrapper {
+    width: 200px; /* Even smaller image on small phones */
+    margin: 0 auto;
+  }
+  .hero-section__image-area::before,
+  .hero-section__image-area::after {
+    width: 40%;
+    height: 30%;
+  }
+
+  .hero-section__title {
+    font-size: 1.8em;
+  }
+}
+/* Hero Section End */
+
+/* skills & experience section start */
+
+.skills-experience {
+  padding: 60px 20px; /* Top/bottom padding, left/right padding */
+  background-color: #190019; /* Main dark background */
+  font-family: sans-serif; /* Replace with your chosen font */
+  color: #fbe4d8; /* Default light text color for the section */
+  text-align: center;
+}
+
+.skills-experience__header {
+  margin-bottom: 25px;
+}
+
+.skills-experience__title {
+  font-size: 2.5em; /* Adjust as needed */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8; /* Brighter white for the main title */
+}
+
+.skills-experience__title-underline {
+  width: 370px; /* Adjust width as needed */
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto; /* Center the underline */
+  border-radius: 2px;
+  box-shadow: 0 2px 5px #ffb30078; /* Optional shadow for depth */
+}
+
+.skills-experience__intro {
+  font-size: 1.1em; /* Adjust as needed */
+  line-height: 1.7;
+  max-width: 800px; /* Constrain width of intro text */
+  margin: 0 auto 40px auto; /* Center and add bottom margin */
+  color: #fff; /* Slightly dimmer light text */
+}
+
+.skills-experience__cards-container {
+  display: flex;
+  justify-content: space-around; /* Distribute cards evenly */
+  align-items: flex-start; /* Align cards to the top if they have different heights */
+  gap: 30px; /* Space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.skill-card {
+  background-color: #4f064fb5; /* Slightly lighter purple for cards */
+  padding: 30px 25px;
+  border-radius: 8px;
+  /* flex-basis: calc(33.333% - 20px); */
+  /* Instead of flex-basis, let's use flex-grow and min-width for better wrapping */
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 280px; /* Minimum width before wrapping/stacking */
+  max-width: 380px; /* Maximum width for a card */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  opacity: 0; /* For JS reveal animation */
+  transform: translateY(20px); /* For JS reveal animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skill-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card__title {
+  font-size: 1.8em; /* Adjust as needed */
+  font-weight: 600;
+  color: #fbe4d8; /* White for card titles */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-card__list {
+  list-style: none;
+  padding-left: 0; /* Remove default ul padding */
+}
+
+.skill-card__list-item {
+  font-size: 0.95em; /* Adjust as needed */
+  line-height: 1.6;
+  color: #fff; /* Dimmer light text for list items */
+  margin-bottom: 12px;
+  padding-left: 20px; /* Space for the custom bullet */
+  position: relative;
+}
+
+.skill-card__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px; /* Adjust for vertical alignment with text */
+  width: 8px;
+  height: 8px;
+  background-color: #ffb300; /* Yellow accent for bullets */
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .skills-experience__cards-container {
+    justify-content: center; /* Center cards when they might not fill the row */
+  }
+  /* .skill-card {
+        /* flex-basis: calc(50% - 15px); Allow two cards per row, adjusting for gap 
+        /* max-width ensures they don't get too wide when only two 
+    } */
+}
+
+@media (max-width: 768px) {
+  .skills-experience__title {
+    font-size: 2em;
+  }
+  .skills-experience__title-underline {
+    width: 290px;
+  }
+  .skills-experience__intro {
+    font-size: 1em;
+    padding: 0 10px; /* Add some horizontal padding for intro on small screens */
+  }
+  .skills-experience__cards-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards in the column */
+    gap: 25px;
+  }
+  .skill-card {
+    width: 100%; /* Make cards take full width available in the column */
+    max-width: 450px; /* But not too wide on medium-small screens */
+    /* flex-basis: 100%; /* Ensure they take full width */
+    /* min-width: unset; */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-experience {
+    padding: 40px 15px;
+  }
+  .skills-experience__title {
+    font-size: 1.8em;
+  }
+  .skills-experience__title-underline {
+    width: 260px;
+  }
+  .skills-experience__intro {
+    font-size: 0.9em;
+  }
+  .skill-card__title {
+    font-size: 1.5em;
+  }
+  .skill-card__list-item {
+    font-size: 0.9em;
+  }
+}
+/* skills & experience section end */
+
+/* Selected Works start */
+
+.selected-works {
+  padding: 60px 20px;
+  background-color: #190019;
+  font-family: sans-serif; /* Replace with your chosen font */
+  color: #fbe4d8;
+  text-align: center;
+}
+
+.selected-works__header {
+  margin-bottom: 25px;
+}
+
+.selected-works__title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8;
+}
+
+.selected-works__title-underline {
+  width: 290px;
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto;
+  border-radius: 2px;
+}
+
+.selected-works__intro {
+  font-size: 1.1em;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 50px auto; /* Increased bottom margin for more space */
+  color: #fff;
+}
+
+.selected-works__grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 40px; /* Space between grid items */
+  max-width: 1200px; /* Optional: constrain the max width of the grid itself */
+  margin: 0 auto; /* Center the grid if max-width is set */
+}
+
+.portfolio-item {
+  background-color: transparent; /* Or a very subtle card background if desired */
+  border-radius: 8px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); Optional subtle shadow */
+  text-align: center;
+  opacity: 0; /* For JS reveal animation */
+  transform: translateY(20px); /* For JS reveal animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-item:hover {
+  /* Example hover: slightly lift the card */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.portfolio-item.is-visible:hover {
+  /* Ensure hover transform applies after reveal */
+  transform: translateY(-5px); /* Simple lift */
+  /* box-shadow: 0 8px 25px rgba(255, 191, 0, 0.2); /* Optional yellow glow */
+}
+
+.portfolio-item__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 6px; /* Match image radius if any */
+  overflow: hidden; /* To contain the image hover effect */
+  margin-bottom: 15px; /* Space between image and title */
+}
+
+.portfolio-item__image-wrapper {
+  position: relative;
+  overflow: hidden; /* Important for image scaling/hover effects */
+  border-radius: 6px; /* Slight rounding on image corners */
+  /* Consider adding a border or subtle inner shadow if needed */
+  /* border: 1px solid rgba(255,255,255,0.1); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on the image itself */
+}
+
+.portfolio-item__image {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio. Ensure source images have consistent aspect ratio for uniform look */
+  /* aspect-ratio: 16 / 9; /* Modern CSS way to enforce aspect ratio if images vary */
+  transition: transform 0.4s ease;
+  border-radius: 6px; /* Match wrapper */
+}
+
+.portfolio-item__link:hover .portfolio-item__image {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.portfolio-item__project-title {
+  font-size: 1.25em; /* Adjust as needed */
+  font-weight: 700;
+  color: #fbe4d8; /* Or #FFFFFF for brighter */
+  text-transform: uppercase;
+  letter-spacing: 0.5px; /* Slight letter spacing */
+  padding: 0 10px; /* In case title is long */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .selected-works__title {
+    font-size: 2em;
+  }
+  .selected-works__title-underline {
+    width: 230px;
+  }
+  .selected-works__intro {
+    font-size: 1em;
+    padding: 0 10px;
+    margin-bottom: 40px;
+  }
+  .selected-works__grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); /* Adjust minmax for smaller screens */
+    gap: 30px;
+  }
+  .portfolio-item__project-title {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .selected-works {
+    padding: 40px 15px;
+  }
+  .selected-works__title {
+    font-size: 1.8em;
+  }
+  .selected-works__title-underline {
+    width: 210px;
+  }
+  .selected-works__intro {
+    font-size: 0.9em;
+  }
+  .selected-works__grid {
+    grid-template-columns: 1fr; /* Stack items fully on very small screens */
+    gap: 30px;
+  }
+  .portfolio-item__project-title {
+    font-size: 1em;
+  }
+}
+/* Selected Works end */
+
+/* Section what I do start */
+
+.what-i-do {
+  padding: 60px 20px;
+  background-color: #190019;
+  font-family: sans-serif; /* Replace with your chosen font */
+  color: #fbe4d8;
+  text-align: center;
+}
+
+.what-i-do__header {
+  margin-bottom: 40px; /* Increased margin as there's no intro paragraph */
+}
+
+.what-i-do__title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8;
+}
+
+.what-i-do__title-underline {
+  width: 170px;
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto; /* Center the underline */
+  border-radius: 2px;
+}
+
+.what-i-do__cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; /* Make cards same height if content differs */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.responsibility-card {
+  background-color: #4f064fb5;
+  padding: 30px 25px;
+  border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 280px;
+  max-width: 380px; /* Max width for a card, adjust as needed */
+  box-shadow: 0 5px 15px #4f064f4c;
+  text-align: left;
+  display: flex; /* To help with vertical alignment if needed, and for consistent height */
+  flex-direction: column; /* Stack title and list vertically */
+  opacity: 0; /* For JS reveal animation */
+  transform: translateY(20px); /* For JS reveal animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.responsibility-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.responsibility-card__title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fbe4d8;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.3; /* Adjust for two-line title */
+}
+
+.responsibility-card__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: auto; /* Pushes list to bottom if card grows due to other card heights */
+}
+
+.responsibility-card__list-item {
+  font-size: 0.95em;
+  line-height: 1.7; /* Increased line-height for better readability of list items */
+  color: #fff;
+  margin-bottom: 15px; /* Slightly more space between items */
+  padding-left: 20px;
+  position: relative;
+}
+
+.responsibility-card__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px; /* Adjusted for line-height */
+  width: 8px;
+  height: 8px;
+  background-color: #ffb300;
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .what-i-do__cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-i-do__title {
+    font-size: 2em;
+  }
+  .what-i-do__title-underline {
+    width: 135px;
+  }
+  .what-i-do__cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .responsibility-card {
+    width: 100%;
+    max-width: 450px;
+  }
+  .responsibility-card__title {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-i-do {
+    padding: 40px 15px;
+  }
+  .what-i-do__title {
+    font-size: 1.8em;
+  }
+  .what-i-do__title-underline {
+    width: 120px;
+  }
+  .responsibility-card__title {
+    font-size: 1.5em;
+  }
+  .responsibility-card__list-item {
+    font-size: 0.9em;
+  }
+}
+/* Section what I do end */
+
+/* Testimonial Section start */
+
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #190019;
+  font-family: sans-serif; /* Replace with your chosen font */
+  color: #fbe4d8;
+  text-align: center;
+}
+
+.testimonial-section__header {
+  margin-bottom: 40px;
+}
+
+.testimonial-section__title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8;
+}
+
+.testimonial-section__title-underline {
+  width: 215px;
+  height: 4px;
+  background-color: #ffbf00; /* Yellow accent */
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.testimonial-section__cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; /* Make cards the same height */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #4f064fb5; /* Card background */
+  padding: 30px 25px;
+  border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 280px;
+  max-width: 380px;
+  box-shadow: 0 5px 15px #4f064f4a;
+  text-align: left; /* Align text inside card to the left */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  opacity: 0; /* For JS reveal animation */
+  transform: translateY(20px); /* For JS reveal animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.testimonial-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-card__quote-icon {
+  font-size: 6.5em; /* Large quote icon */
+  color: #ffb300; /* Yellow accent */
+  line-height: 1; /* Adjust vertical spacing */
+  text-align: center; /* Center the quote icon */
+  font-family: Georgia, serif; /* A font with nice quotes */
+}
+
+.testimonial-card__text {
+  text-align: center;
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #fff; /* Dimmer light text for testimonial */
+  margin-bottom: 20px;
+  font-style: italic; /* Common for quotes */
+  flex-grow: 1; /* Allows text to take available space, pushing author down */
+}
+
+.testimonial-card__author {
+  margin-top: auto; /* Pushes author to the bottom of the card */
+  text-align: center; /* Center author details */
+}
+
+.testimonial-card__author-name {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fbe4d8; /* Brighter white for name */
+  margin-bottom: 2px;
+}
+
+.testimonial-card__author-title,
+.testimonial-card__author-affiliation {
+  font-size: 0.9em;
+  color: #dfb6b2; /* Dimmer light text */
+  line-height: 1.4;
+}
+.testimonial-card__author-affiliation {
+  margin-bottom: 0; /* Remove bottom margin if it's the last item */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .testimonial-section__cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-section__title {
+    font-size: 2em;
+  }
+  .testimonial-section__title-underline {
+    width: 170px;
+  }
+  .testimonial-section__cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .testimonial-card {
+    width: 100%;
+    max-width: 450px;
+    text-align: center; /* Center text content within card on mobile */
+  }
+  .testimonial-card__text {
+    text-align: left; /* Keep quote text left aligned for readability */
+  }
+  .testimonial-card__quote-icon,
+  .testimonial-card__author {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 40px 15px;
+  }
+  .testimonial-section__title {
+    font-size: 1.8em;
+  }
+  .testimonial-section__title-underline {
+    width: 150px;
+  }
+  .testimonial-card__quote-icon {
+    font-size: 3em;
+  }
+  .testimonial-card__text {
+    font-size: 0.9em;
+  }
+  .testimonial-card__author-name {
+    font-size: 1em;
+  }
+  .testimonial-card__author-title,
+  .testimonial-card__author-affiliation {
+    font-size: 0.85em;
+  }
+}
+/* Testimonial Section end */
+
+/* contact footer Start */
+
+.cta-section {
+  background-color: #4f064fb5; /* Background for the CTA bar itself */
+  padding: 40px 20px; /* Generous padding */
+  font-family: sans-serif; /* Replace with your chosen font */
+}
+
+.cta-section__content {
+  max-width: 900px; /* Constrain width of the content within the bar */
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  justify-content: space-between; /* Pushes heading left, button right */
+  align-items: center; /* Vertically align items */
+  gap: 20px; /* Space between heading and button if they get close */
+}
+
+.cta-section__heading {
+  font-size: 1.8em; /* Adjust as needed */
+  font-weight: 600;
+  color: #fbe4d8; /* Light text color */
+  line-height: 1.4;
+  margin: 0; /* Remove default heading margin */
+}
+
+.cta-section__button {
+  background-color: #ffb300; /* Yellow accent color */
+  color: #1c1131; /* Dark text color, matches main background */
+  border: none;
+  padding: 12px 28px; /* Adjust padding for button size */
+  font-size: 1.1em; /* Adjust as needed */
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  white-space: nowrap; /* Prevent button text from wrapping */
+  box-shadow: 0 2px 8px #ffb3004d; /* Subtle yellow glow/shadow */
+}
+
+.cta-section__button:hover {
+  background-color: #e5ac00; /* Slightly darker yellow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #ffb30066;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-section__content {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text and button */
+    gap: 25px; /* Space between heading and button when stacked */
+  }
+  .cta-section__heading {
+    font-size: 1.6em;
+  }
+  .cta-section__button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 30px 15px;
+  }
+  .cta-section__heading {
+    font-size: 1.4em;
+  }
+}
+/* contact footer end */
+
+/* Footer Section start */
+
+.footer-section {
+  margin-top: 50px; /* Space above the footer */
+  background-color: #522b5b; /* Consistent dark background */
+  color: #fbe4d8; /* Default text color for the footer */
+  padding: 50px 20px 30px; /* Top, horizontal, bottom padding */
+  text-align: center;
+  font-family: sans-serif; /* Replace with your chosen font */
+}
+
+.footer-section__content {
+  max-width: 700px; /* Constrain width for readability */
+  margin: 0 auto;
+}
+
+.footer-section__title {
+  font-size: 2em; /* Adjust as needed */
+  font-weight: 600;
+  color: #fff; /* Brighter white for title */
+  margin-bottom: 20px;
+}
+
+.footer-section__description {
+  font-size: 1em; /* Adjust as needed */
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.footer-section__copyright {
+  font-size: 0.85em;
+  color: #b0a8c8; /* Dimmer text for copyright */
+  margin-bottom: 25px;
+}
+
+.footer-section__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+}
+
+.footer-section__social-link {
+  color: #ede7f6; /* Icon color */
+  text-decoration: none;
+  font-size: 1.5em; /* Adjust size of icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex; /* Helps with alignment and sizing */
+  align-items: center;
+  justify-content: center;
+  /* Optional: if you want circular backgrounds for icons */
+  /*
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    */
+}
+
+.footer-section__social-link svg {
+  width: 24px; /* Control SVG size explicitly if needed */
+  height: 24px;
+}
+
+.footer-section__social-link:hover {
+  color: #ffbf00; /* Yellow accent on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-section__title {
+    font-size: 1.8em;
+  }
+  .footer-section__description {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 40px 15px 20px;
+  }
+  .footer-section__title {
+    font-size: 1.6em;
+  }
+  .footer-section__description {
+    font-size: 0.9em;
+  }
+  .footer-section__copyright {
+    font-size: 0.8em;
+  }
+  .footer-section__social-link {
+    font-size: 1.3em; /* Slightly smaller icons on mobile */
+    gap: 15px;
+  }
+  .footer-section__social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* Footer Section end */

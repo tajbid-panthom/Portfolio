@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../../public/css/style.css" />
+    <link rel="stylesheet" href="../../public/css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="./index.html" class="site-header__logo-link">
+            Taj<span class="site-header__logo-dev">DEV</span
+            ><span class="site-header__logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="site-header__nav" id="main-nav">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a href="./index.html" class="site-header__nav-link">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./about.html" class="site-header__nav-link">About</a>
+              <!-- Ensure you have a <section id="about"> or similar -->
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./portfolio.html" class="site-header__nav-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./services.html" class="site-header__nav-link"
+                >Services</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./contact.html" class="site-header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="site-header__mobile-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--open"
+            >☰</span
+          >
+          <!-- Hamburger -->
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--close"
+            style="display: none"
+            >×</span
+          >
+          <!-- Close icon -->
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar end -->
+
+    <!-- Contact start -->
+    <section class="contact-section" id="contact">
+      <!-- Section Header -->
+      <div class="contact-section__header animate-on-scroll">
+        <h2 class="contact-section__main-title">Get in touch</h2>
+        <div class="contact-section__title-underline"></div>
+        <p class="contact-section__intro">
+          Feel free to reach out for collaboration, project inquiries, or just
+          to say hello. I'm always open to new opportunities and meaningful
+          connections.
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <form
+        class="contact-form animate-on-scroll"
+        id="contactForm"
+        action="YOUR_FORM_ENDPOINT_HERE"
+        method="POST"
+      >
+        <div class="contact-form__row">
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-form__input"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact-form__input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </div>
+        <div class="contact-form__group">
+          <label for="subject" class="contact-form__label"
+            >Subject (Optional)</label
+          >
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="contact-form__input"
+            placeholder="Enter your subject"
+          />
+        </div>
+        <div class="contact-form__group">
+          <label for="message" class="contact-form__label">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            class="contact-form__textarea"
+            rows="5"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="contact-form__submit-button">
+          Send Message
+        </button>
+        <div
+          id="form-status-message"
+          class="contact-form__status-message"
+        ></div>
+      </form>
+
+      <!-- Contact Info Blocks -->
+      <div class="contact-info__container">
+        <div class="contact-info__block animate-on-scroll">
+          <!-- Replace with SVG or Font Awesome icon -->
+          <span class="contact-info__icon"
+            ><i class="fa-solid fa-envelope"></i
+          ></span>
+          <a href="mailto:tajbidhossain903@gmail.com" class="contact-info__text"
+            >tajbidhossain903@gmail.com</a
+          >
+        </div>
+        <div class="contact-info__block animate-on-scroll">
+          <!-- Replace with SVG or Font Awesome icon -->
+          <span class="contact-info__icon"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></span>
+          <a
+            href="https://wa.me/8801738166031"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-info__text"
+            >+8801738166031</a
+          >
+        </div>
+        <div class="contact-info__block animate-on-scroll">
+          <!-- Replace with SVG or Font Awesome icon -->
+          <span class="contact-info__icon"
+            ><i class="fa-solid fa-location-dot"></i
+          ></span>
+          <p class="contact-info__text">Khulna University, Khulna</p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- Contact footer Start -->
+    <div id="contact-footer"></div>
+    <!-- Contact footer end -->
+
+    <!-- Footer Start  -->
+    <div id="footer"></div>
+    <!-- Footer end -->
+
+    <script src="../../public/js/script.js"></script>
+    <script src="../../public/js/contact.js"></script>
+  </body>
+</html>

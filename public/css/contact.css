@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif; /* Example: Replace with your chosen font */
+  background-color: #190019; /* Assuming this is the overall page background */
+  color: #fbe4d8;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #190019; /* Main section background */
+  font-family: sans-serif; /* Default sans-serif, replace */
+}
+
+.contact-section__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-section__main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8;
+}
+
+.contact-section__title-underline {
+  width: 230px;
+  height: 4px;
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto;
+  border-radius: 2px;
+}
+
+.contact-section__intro {
+  font-size: 1.1em;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto 50px auto; /* Space below form */
+}
+
+.contact-form__row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.contact-form__row .contact-form__group {
+  flex: 1; /* Make Name and Email fields take equal width */
+  margin-bottom: 0; /* Remove bottom margin as row handles it */
+}
+
+.contact-form__group {
+  margin-bottom: 20px;
+}
+
+.contact-form__label {
+  display: block;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #fbe4d8;
+  margin-bottom: 8px;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #4f064fb5; /* Darker input background */
+  border: 1px solid #2a002ab5; /* Subtle border */
+  border-radius: 6px;
+  color: #ede7f6; /* Text color inside input */
+  font-size: 1em;
+  font-family: inherit; /* Inherit font from section/body */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: #b0a8c8; /* Dimmer placeholder text */
+  opacity: 0.7;
+}
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border-color: #ffbf00; /* Yellow border on focus */
+  box-shadow: 0 0 0 2px rgba(255, 191, 0, 0.3);
+}
+
+.contact-form__textarea {
+  resize: vertical; /* Allow vertical resize, not horizontal */
+  min-height: 120px;
+}
+
+.contact-form__submit-button {
+  background-color: #ffb300;
+  color: #1c1131; /* Dark text on yellow button */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block; /* Make button block to center with margin */
+  margin: 20px auto 0 auto; /* Center button */
+}
+.contact-form__submit-button:hover {
+  background-color: #e6ac00;
+  transform: translateY(-2px);
+}
+
+.contact-form__status-message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.contact-form__status-message.success {
+  color: #4caf50;
+} /* Green for success */
+.contact-form__status-message.error {
+  color: #f44336;
+} /* Red for error */
+
+/* Contact Info Blocks */
+.contact-info__container {
+  display: flex;
+  justify-content: space-around; /* Or space-between */
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info__block {
+  background-color: #4f064fb5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px; /* Ensure blocks don't get too narrow */
+  max-width: 320px;
+  box-shadow: 0 3px 10px #4f064f3b;
+}
+
+.contact-info__icon {
+  display: block; /* Or inline-block */
+  font-size: 1.8em; /* Adjust icon size */
+  color: #ffb300; /* Yellow icon */
+  margin-bottom: 10px;
+  /* Add actual SVG/Font Awesome icon styles here */
+}
+
+.contact-info__text {
+  font-size: 0.9em;
+  color: #fbe4d8;
+  line-height: 1.5;
+  text-decoration: none; /* For links */
+  word-break: break-all; /* Break long emails/numbers */
+}
+.contact-info__text:hover {
+  /* For links */
+  color: #f8b896;
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Staggering animation */
+.contact-section .contact-form.animate-on-scroll.is-visible {
+  transition-delay: 0.15s;
+}
+.contact-section
+  .contact-info__block.animate-on-scroll:nth-of-type(1).is-visible {
+  transition-delay: 0.3s;
+}
+.contact-section
+  .contact-info__block.animate-on-scroll:nth-of-type(2).is-visible {
+  transition-delay: 0.45s;
+}
+.contact-section
+  .contact-info__block.animate-on-scroll:nth-of-type(3).is-visible {
+  transition-delay: 0.6s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-section__main-title {
+    font-size: 2em;
+  }
+  .contact-section__intro {
+    font-size: 1em;
+  }
+  .contact-form__row {
+    flex-direction: column; /* Stack Name and Email on mobile */
+    gap: 0; /* Remove gap as they are stacked */
+  }
+  .contact-form__row .contact-form__group {
+    margin-bottom: 20px; /* Add back margin for stacked items */
+  }
+  .contact-info__container {
+    flex-direction: column;
+    align-items: center; /* Center blocks when stacked */
+  }
+  .contact-section__title-underline {
+    width: 180px;
+  }
+  .contact-info__block {
+    width: 100%;
+    max-width: 400px; /* Max width for stacked info blocks */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section__title-underline {
+    width: 170px;
+  }
+  .contact-section {
+    padding: 40px 15px;
+  }
+  .contact-section__main-title {
+    font-size: 1.8em;
+  }
+}

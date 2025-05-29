@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif; /* Example: Replace with your chosen font */
+  background-color: #190019; /* Assuming this is the overall page background */
+  color: #fbe4d8;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Skills & experience start */
+
+.skills-section-header {
+  /* This div would typically be within a larger section like:
+       <section class="skills-experience" id="skills" style="background-color: #1C1131;">
+           ... this .skills-section-header div ...
+           ... skill cards ...
+       </section>
+    */
+  text-align: center;
+  padding: 0 20px; /* Horizontal padding to prevent text touching edges */
+  padding-top: 40px;
+  margin-bottom: 40px; /* Space below this header before the next content (e.g., skill cards) */
+  font-family: sans-serif; /* Replace with your chosen font */
+}
+
+.skills-section-header__title {
+  font-size: 2.5em; /* Adjust as needed */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fbe4d8; /* Bright white for the main title */
+  /* The slight text shadow from the image is subtle. If desired: */
+  /* text-shadow: 0 0 5px rgba(255,255,255,0.1), 0 0 10px rgba(255,255,255,0.1); */
+}
+
+.skills-section-header__underline {
+  width: 365px; /* Adjust width as needed - seems wider in this image */
+  height: 5px; /* Adjust thickness as needed */
+  background-color: #ffb300; /* Yellow accent */
+  margin: 0 auto 25px auto; /* Center the underline and add space below */
+  border-radius: 2.5px;
+}
+
+.skills-section-header__intro {
+  font-size: 1.1em; /* Adjust as needed */
+  line-height: 1.7;
+  max-width: 800px; /* Constrain width of intro text */
+  margin: 0 auto; /* Center the intro paragraph */
+  color: #fff; /* Slightly dimmer light text */
+}
+
+/* Responsive adjustments for the header part */
+@media (max-width: 768px) {
+  .skills-section-header__title {
+    font-size: 2em;
+  }
+  .skills-section-header__underline {
+    width: 290px;
+    height: 4px;
+  }
+  .skills-section-header__intro {
+    font-size: 1em;
+    padding: 0 10px; /* Ensure intro text doesn't get too close to edges */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section-header {
+    padding: 0px 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .skills-section-header__title {
+    font-size: 1.8em;
+  }
+  .skills-section-header__underline {
+    width: 260px;
+    height: 4px;
+  }
+  .skills-section-header__intro {
+    font-size: 0.9em;
+  }
+}
+
+/* Frontend Development Skills Section start */
+
+.frontend-skills-section {
+  padding: 40px 20px;
+  font-family: sans-serif; /* Default sans-serif, replace */
+  color: #ede7f6;
+}
+
+.frontend-skills-section__title {
+  font-size: 2.2em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fbe4d8;
+  font-family: serif; /* Or your chosen serif font */
+}
+
+.frontend-skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* .skill-item {
+  /* No specific styles needed here, but useful for targeting 
+} */
+
+.skill-item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-item__name {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #fbe8d8;
+}
+
+.skill-item__percentage {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #d1c4e9;
+}
+
+.skill-item__progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #4a3f6d; /* Darker track color */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-item__progress-bar-filled {
+  height: 100%;
+  width: 0; /* Initial width, JS will set this */
+  background-color: #ffb300; /* Yellow accent */
+  border-radius: 5px;
+  transition: width 1.2s ease-out; /* CSS transition for bar fill */
+}
+
+/* Animation for the whole section appearing */
+.skills-progress-animate-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.skills-progress-animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .frontend-skills-section__title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .frontend-skills-section__grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .skill-item__name {
+    font-size: 0.9em;
+  }
+  .skill-item__percentage {
+    font-size: 0.85em;
+  }
+  .skill-item__progress-bar {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frontend-skills-section {
+    padding: 30px 15px;
+  }
+  .frontend-skills-section__title {
+    font-size: 1.6em;
+  }
+}
+/* Frontend Development Skills Section start */
+
+/* Backend Development Skills Section start */
+/* Assuming general styles for .skill-item and its children are already defined from the frontend section */
+
+.backend-skills-section {
+  padding: 40px 20px;
+  font-family: sans-serif; /* Default sans-serif, replace */
+  color: #fbe4d8;
+}
+
+.backend-skills-section__title {
+  font-size: 2.2em; /* Adjust as needed */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fbe4d8;
+  font-family: serif; /* Or your chosen serif font */
+}
+
+.backend-skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px 40px; /* Row gap, Column gap */
+  max-width: 900px; /* Max width for the grid */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Reusable styles for skill items (if not already globally available) */
+/* If these are already defined from the .frontend-skills-section, you don't need to repeat them */
+/*
+.skill-item { ... }
+.skill-item__info { ... }
+.skill-item__name { ... }
+.skill-item__percentage { ... }
+.skill-item__progress-bar { ... }
+.skill-item__progress-bar-filled { ... }
+*/
+
+/* Animation for the whole section appearing (reusable class) */
+.skills-progress-animate-section {
+  /* This class should be on both frontend and backend skill section divs */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.skills-progress-animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments (could be combined with frontend if selectors are generic) */
+@media (max-width: 768px) {
+  .backend-skills-section__title {
+    /* Or a more generic .skills-section__title */
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .backend-skills-section__grid {
+    /* Or a more generic .skills-section__grid */
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .backend-skills-section {
+    padding: 30px 15px;
+  }
+  .backend-skills-section__title {
+    /* Or a more generic .skills-section__title */
+    font-size: 1.6em;
+  }
+}
+/* Backend Development Skills Section end */
+
+/* Database Skills Section Start */
+/* Assuming general styles for .skill-item and its children are mostly defined. */
+/* If you have one global .skill-item__progress-bar style, you might need to adjust it */
+/* or add an override here if this section's track color is different. */
+
+.database-skills-section {
+  padding: 40px 20px;
+  font-family: sans-serif; /* Default sans-serif, replace */
+  color: #fbe4d8;
+}
+
+.database-skills-section__title {
+  font-size: 2.2em; /* Adjust as needed */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fbe4d8;
+  font-family: serif; /* Or your chosen serif font */
+}
+
+.database-skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px 40px; /* Row gap, Column gap */
+  max-width: 900px; /* Max width for the grid */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Animation for the whole section appearing (reusable class) */
+.skills-progress-animate-section {
+  /* This class should be on all skill section divs */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.skills-progress-animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .database-skills-section__title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .database-skills-section__grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 25px;
+  }
+  .skill-item__name,
+  .skill-item__percentage {
+    /* Adjust if font changes */
+    font-size: 0.9em;
+  }
+  .skill-item__progress-bar {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .database-skills-section {
+    padding: 30px 15px;
+  }
+  .database-skills-section__title {
+    font-size: 1.6em;
+  }
+}
+/* Database Skills Section end */
+
+/* Tools Skills Section start */
+
+/* Assuming general styles for .skill-item and its children are mostly defined. */
+
+.tools-skills-section {
+  padding: 40px 20px;
+  font-family: sans-serif; /* Default sans-serif for section, specific elements will override */
+  color: #fbe4d8;
+}
+
+.tools-skills-section__title {
+  font-size: 2.2em; /* Adjust as needed */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fbe4d8;
+  font-family: serif; /* Or your chosen serif font */
+}
+
+.tools-skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px 40px; /* Row gap, Column gap */
+  max-width: 900px; /* Max width for the grid */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Styles for skill items, assuming these might be shared or need slight adjustment for this section */
+/* If these are globally defined with a consistent look, you may not need to repeat/override all of them */
+
+/* Animation for the whole section appearing (reusable class) */
+.skills-progress-animate-section {
+  /* This class should be on all skill section divs */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.skills-progress-animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tools-skills-section__title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .tools-skills-section__grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 25px;
+  }
+  /* Adjust skill name/percentage size if needed for mobile with serif font */
+  .tools-skills-section .skill-item__name,
+  .tools-skills-section .skill-item__percentage {
+    font-size: 0.9em;
+  }
+  .skill-item__progress-bar {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-skills-section {
+    padding: 30px 15px;
+  }
+  .tools-skills-section__title {
+    font-size: 1.6em;
+  }
+}
+/* Tools Skills Section end */
+
+/* Skill Card start */
+
+/* Container for these specific skill category cards */
+.skill-categories__container {
+  display: flex;
+  justify-content: space-around; /* Or space-between, or center with gaps */
+  align-items: stretch; /* Make cards same height if content differs */
+  gap: 30px; /* Space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  padding: 0 20px; /* Add some horizontal padding if needed */
+  padding-bottom: 40px;
+  max-width: 1200px; /* Optional: constrain width */
+  margin: 0 auto; /* Center if max-width is set */
+  font-family: sans-serif; /* Replace with your chosen font */
+}
+
+.skill-category-card {
+  background-color: #4f064fb5; /* Darker purple for cards */
+  padding: 30px 25px;
+  border-radius: 8px;
+  flex-grow: 1; /* Allow cards to grow to fill space */
+  flex-shrink: 1;
+  min-width: 280px; /* Minimum width before wrapping/stacking */
+  max-width: 380px; /* Maximum width for a card, helps with consistency */
+  box-shadow: 0 5px 15px #4f064f5b;
+  text-align: left; /* Content inside card is left-aligned */
+  display: flex; /* For vertical alignment of content if needed */
+  flex-direction: column; /* Stack title and list vertically */
+}
+
+.skill-category-card__title {
+  font-size: 1.8em; /* Adjust as needed */
+  font-weight: 600;
+  color: #fbe4d8; /* White for card titles */
+  margin-bottom: 20px;
+  text-align: center; /* Title is centered within the card */
+}
+
+.skill-category-card__list {
+  list-style: none;
+  padding-left: 0; /* Remove default ul padding */
+  margin-top: auto; /* Pushes list to bottom if card grows due to other card heights, useful if align-items: stretch is used on container */
+}
+
+.skill-category-card__list-item {
+  font-size: 0.95em; /* Adjust as needed */
+  line-height: 1.7;
+  color: #fff; /* Dimmer light text for list items */
+  margin-bottom: 12px;
+  padding-left: 20px; /* Space for the custom bullet */
+  position: relative;
+}
+
+.skill-category-card__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px; /* Adjust for vertical alignment with text (depends on line-height and font-size) */
+  width: 8px;
+  height: 8px;
+  background-color: #ffb300; /* Yellow accent for bullets */
+  border-radius: 50%;
+}
+
+/* Animation states for JavaScript (generic class) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger animation for cards (optional) */
+.skill-category-card.animate-on-scroll:nth-child(2).is-visible {
+  transition-delay: 0.15s;
+}
+.skill-category-card.animate-on-scroll:nth-child(3).is-visible {
+  transition-delay: 0.3s;
+}
+
+/* Responsive adjustments for the cards */
+@media (max-width: 992px) {
+  /* For tablets, might still have 2 or 3 cards or adjust max-width */
+  .skill-categories__container {
+    justify-content: center; /* Center cards if they don't fill the row */
+  }
+  .skill-category-card {
+    flex-basis: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* For smaller tablets and mobile */
+  .skill-categories__container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards in the column */
+    gap: 25px;
+    padding: 0 15px;
+    padding-bottom: 20px;
+  }
+  .skill-category-card {
+    width: 100%; /* Make cards take full width available in the column */
+    max-width: 450px; /* But not too wide on medium-small screens */
+    min-width: unset; /* Reset min-width for stacked layout */
+  }
+  .skill-category-card__title {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For small mobile phones */
+  .skill-category-card__title {
+    font-size: 1.5em;
+  }
+  .skill-category-card__list-item {
+    font-size: 0.9em;
+  }
+}
+/* Skill Card end */

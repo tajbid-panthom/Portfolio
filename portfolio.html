@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../../public/css/style.css" />
+    <link rel="stylesheet" href="../../public/css/portfolio.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="./index.html" class="site-header__logo-link">
+            Taj<span class="site-header__logo-dev">DEV</span
+            ><span class="site-header__logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="site-header__nav" id="main-nav">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a href="./index.html" class="site-header__nav-link">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./about.html" class="site-header__nav-link">About</a>
+              <!-- Ensure you have a <section id="about"> or similar -->
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./portfolio.html" class="site-header__nav-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./services.html" class="site-header__nav-link"
+                >Services</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./contact.html" class="site-header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="site-header__mobile-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--open"
+            >☰</span
+          >
+          <!-- Hamburger -->
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--close"
+            style="display: none"
+            >×</span
+          >
+          <!-- Close icon -->
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar end -->
+
+    <!-- Selected Work details Start -->
+
+    <section class="selected-works-detailed" id="portfolio">
+      <!-- Header part -->
+      <div class="selected-works-detailed__header animate-on-scroll">
+        <h2 class="selected-works-detailed__main-title">Selected Works</h2>
+        <div class="selected-works-detailed__title-underline"></div>
+        <p class="selected-works-detailed__intro">
+          Built full-stack web applications ranging from event management and
+          scheduling systems to e-learning platforms and social media features.
+        </p>
+      </div>
+
+      <div class="selected-works-detailed__projects-list">
+        <!-- Project Item 1: KUCC Management System (Image Left, Text Right) -->
+        <div class="portfolio-project-item animate-on-scroll">
+          <div class="portfolio-project-item__image-col">
+            <a
+              href="https://github.com/tajbid-panthom/KUCC-MANAGEMENT-SYSTEM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./public/images/kucc.png"
+                alt="KUCC Management System Screenshot"
+              />
+            </a>
+          </div>
+          <div class="portfolio-project-item__text-col">
+            <h3 class="portfolio-project-item__title">
+              KUCC_MANAGEMENT_SYSTEM
+            </h3>
+            <p class="portfolio-project-item__description">
+              A database management system project based on Khulna University
+              Career Club to manage the events, workshop, seminar. It makes the
+              management system easier for the club - Node.JS, MySQL,
+              Express.JS, EJS, CSS & Bootstrap.
+            </p>
+            <p class="portfolio-project-item__github-text">
+              <strong>Github:</strong>
+              <a
+                href="https://github.com/tajbid-panthom/KUCC-MANAGEMENT-SYSTEM"
+                class="portfolio-project-item__github-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://github.com/tajbid-panthom/KUCC-MANAGEMENT-SYSTEM</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Item 2: Instagram Clone (Text Left, Image Right) -->
+        <div class="portfolio-project-item animate-on-scroll">
+          <div class="portfolio-project-item__image-col">
+            <a
+              href="https://github.com/tajbid-panthom/INSTAGRAM_CLONE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./public/images/insta.png"
+                alt="Instagram Clone Screenshot"
+              />
+            </a>
+          </div>
+          <div class="portfolio-project-item__text-col">
+            <h3 class="portfolio-project-item__title">INSTAGRAM_CLONE</h3>
+            <p class="portfolio-project-item__description">
+              A clone of instagram to use the basic functionality of instagram
+              to post something, making comments & others - React.JS,
+              Shandcn/UI, TailwindCSS, Node.JS, Express.JS, MongoDB, Mongoose.
+            </p>
+            <p class="portfolio-project-item__github-text">
+              <strong>Github:</strong>
+              <a
+                href="https://github.com/tajbid-panthom/INSTAGRAM_CLONE"
+                class="portfolio-project-item__github-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://github.com/tajbid-panthom/INSTAGRAM_CLONE</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Item 3: LMS Learning (Image Left, Text Right) -->
+        <div class="portfolio-project-item animate-on-scroll">
+          <div class="portfolio-project-item__image-col">
+            <a
+              href="https://github.com/tajbid-panthom/LMS_Learning"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./public/images/lms.png"
+                alt="LMS Learning Platform Screenshot"
+              />
+            </a>
+          </div>
+          <div class="portfolio-project-item__text-col">
+            <h3 class="portfolio-project-item__title">LMS_Learning</h3>
+            <p class="portfolio-project-item__description">
+              An online teaching platform for selling courses. It is a course
+              which is a YouTube based learning project - React.JS, Shandcn/UI,
+              TailwindCSS, Node.JS, Express.JS, Redux, MongoDB, Mongoose.
+            </p>
+            <p class="portfolio-project-item__github-text">
+              <strong>Github:</strong>
+              <a
+                href="https://github.com/tajbid-panthom/LMS_Learning"
+                class="portfolio-project-item__github-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://github.com/tajbid-panthom/LMS_Learning</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Item 4: Routine Generator (Text Left, Image Right) -->
+        <div class="portfolio-project-item animate-on-scroll">
+          <div class="portfolio-project-item__image-col">
+            <a
+              href="https://github.com/tajbid-panthom/AUTOMATIC_ROUTINE_GENERATOR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./public/images/routine.png"
+                alt="Routine Generator Screenshot"
+              />
+            </a>
+          </div>
+          <div class="portfolio-project-item__text-col">
+            <h3 class="portfolio-project-item__title">ROUTINE_GENERATOR</h3>
+            <p class="portfolio-project-item__description">
+              An algorithmic (job sequencing, sorting, backtracking) project
+              based on a routine schedule for every year of students as their
+              courses & teachers. The teachers and courses are user defined -
+              Node.JS, Express.JS, HTML, CSS, JS, MySQL, Python.
+            </p>
+            <p class="portfolio-project-item__github-text">
+              <strong>Github:</strong>
+              <a
+                href="https://github.com/tajbid-panthom/AUTOMATIC_ROUTINE_GENERATOR"
+                class="portfolio-project-item__github-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://github.com/tajbid-panthom/AUTOMATIC_ROUTINE_GENERATOR</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Selected Work details end -->
+
+    <!-- Contact footer Start -->
+    <div id="contact-footer"></div>
+    <!-- Contact footer end -->
+
+    <!-- Footer Start  -->
+    <div id="footer"></div>
+    <!-- Footer end -->
+
+    <script src="../../public/js/script.js"></script>
+    <script src="../../public/js/portfolio.js"></script>
+  </body>
+</html>

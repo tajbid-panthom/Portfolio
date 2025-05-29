@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../../public/css/style.css" />
+    <link rel="stylesheet" href="../../public/css/services.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="./index.html" class="site-header__logo-link">
+            Taj<span class="site-header__logo-dev">DEV</span
+            ><span class="site-header__logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="site-header__nav" id="main-nav">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a href="./index.html" class="site-header__nav-link">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./about.html" class="site-header__nav-link">About</a>
+              <!-- Ensure you have a <section id="about"> or similar -->
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./portfolio.html" class="site-header__nav-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./services.html" class="site-header__nav-link"
+                >Services</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a href="./contact.html" class="site-header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="site-header__mobile-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--open"
+            >☰</span
+          >
+          <!-- Hamburger -->
+          <span
+            class="site-header__mobile-toggle-icon site-header__mobile-toggle-icon--close"
+            style="display: none"
+            >×</span
+          >
+          <!-- Close icon -->
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar end -->
+
+    <!-- what i do section start -->
+    <section class="what-i-do-section" id="services">
+      <!-- Section Header -->
+      <div class="what-i-do-section__header animate-on-scroll">
+        <h2 class="what-i-do-section__main-title">What I do</h2>
+        <div class="what-i-do-section__title-underline"></div>
+      </div>
+
+      <!-- Responsibility Cards Container -->
+      <div class="what-i-do-section__cards-container">
+        <div class="responsibility-card-item animate-on-scroll">
+          <h3 class="responsibility-card-item__title">
+            Frontend<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card-item__list">
+            <li class="responsibility-card-item__list-item">
+              Design and build user interfaces with HTML, CSS, and JavaScript
+              frameworks like React.js
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Ensure responsive and interactive designs across all devices
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Work with APIs to fetch and display data dynamically
+            </li>
+          </ul>
+        </div>
+
+        <div class="responsibility-card-item animate-on-scroll">
+          <h3 class="responsibility-card-item__title">
+            Backend<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card-item__list">
+            <li class="responsibility-card-item__list-item">
+              Develop server-side logic using languages like Node.js
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Design and manage databases (e.g., MongoDB, MySQL)
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Create and secure RESTful APIs, handle authentication, and manage
+              user sessions
+            </li>
+          </ul>
+        </div>
+
+        <div class="responsibility-card-item animate-on-scroll">
+          <h3 class="responsibility-card-item__title">
+            UI/UX Design<br />Responsibilities
+          </h3>
+          <ul class="responsibility-card-item__list">
+            <li class="responsibility-card-item__list-item">
+              Understand user needs, behaviors, and pain points through
+              research, surveys, and usability testing.
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Create wire-frames, mock-ups, and interactive prototypes to
+              visualize user journeys and interface layout.
+            </li>
+            <li class="responsibility-card-item__list-item">
+              Develop visually appealing, user-friendly designs that enhance
+              usability.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- what i do section end -->
+
+    <!-- Pricing Section start -->
+
+    <section class="pricing-section" id="services">
+      <!-- Pricing Section Header -->
+      <div class="pricing-section__header animate-on-scroll">
+        <h2 class="pricing-section__main-title">Pricing</h2>
+        <div class="pricing-section__title-underline"></div>
+      </div>
+
+      <!-- Pricing Cards Container -->
+      <div class="pricing-section__cards-container">
+        <!-- Silver Package Card -->
+        <div class="pricing-card animate-on-scroll">
+          <h3 class="pricing-card__title">Silver Package</h3>
+          <ul class="pricing-card__features-list">
+            <li><strong>Pages:</strong> Up to 3 static/dynamic pages</li>
+            <li>
+              <strong>Tech Stack:</strong> MERN Basic (React, Node, MongoDB)
+            </li>
+            <li><strong>UI/UX:</strong> Basic responsive design</li>
+            <li><strong>Database:</strong> Simple MongoDB schema</li>
+            <li><strong>Features:</strong> Contact form, content sections</li>
+            <li><strong>Delivery:</strong> 5 – 7 Days</li>
+            <li><strong>Revisions:</strong> 1 Revision</li>
+            <li><strong>Hosting:</strong> Not included</li>
+            <li><strong>Support:</strong> 3 Days</li>
+            <li class="pricing-card__price">
+              <strong>Price:</strong> $299 – $499
+            </li>
+          </ul>
+        </div>
+
+        <!-- Gold Package Card -->
+        <div class="pricing-card animate-on-scroll">
+          <h3 class="pricing-card__title">Gold Package</h3>
+          <ul class="pricing-card__features-list">
+            <li><strong>Pages:</strong> Up to 6 dynamic pages</li>
+            <li><strong>Tech Stack:</strong> Full MERN Stack + Auth/API</li>
+            <li>
+              <strong>UI/UX:</strong> Custom UI with Tailwind or Bootstrap
+            </li>
+            <li><strong>Database:</strong> Relational logic & data modeling</li>
+            <li><strong>Features:</strong> Auth, forms, dashboard, CRUD</li>
+            <li><strong>Delivery:</strong> 7 – 10 Days</li>
+            <li><strong>Revisions:</strong> 2 Revisions</li>
+            <li>
+              <strong>Hosting:</strong> Optional (Free deployment on Vercel)
+            </li>
+            <li><strong>Support:</strong> 7 Days</li>
+            <li class="pricing-card__price">
+              <strong>Price:</strong> $699 – $999
+            </li>
+          </ul>
+        </div>
+
+        <!-- Platinum Package Card -->
+        <div class="pricing-card animate-on-scroll">
+          <h3 class="pricing-card__title">Platinum Package</h3>
+          <ul class="pricing-card__features-list">
+            <li><strong>Pages:</strong> Unlimited pages / complete web app</li>
+            <li>
+              <strong>Tech Stack:</strong> Full MERN + Admin Panel + 3rd-party
+              APIs
+            </li>
+            <li><strong>UI/UX:</strong> Premium UI/UX design + animations</li>
+            <li>
+              <strong>Database:</strong> Complex DB, relationships, filtering,
+              sorting
+            </li>
+            <li>
+              <strong>Features:</strong> Payment gateway, uploads, analytics,
+              roles
+            </li>
+            <li><strong>Delivery:</strong> 10 – 20 Days</li>
+            <li><strong>Revisions:</strong> 3+ Revisions</li>
+            <li>
+              <strong>Hosting:</strong> Free hosting + deployment + domain setup
+            </li>
+            <li><strong>Support:</strong> 30 Days</li>
+            <li class="pricing-card__price">
+              <strong>Price:</strong> $1,299 – $2,499+
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hourly Rate Bar -->
+      <div class="pricing-section__hourly-rate-bar animate-on-scroll">
+        <p>Hourly Rate (USD): $15 - $30</p>
+      </div>
+    </section>
+    <!-- Pricing Section end -->
+
+    <!-- Contact footer Start -->
+    <div id="contact-footer"></div>
+    <!-- Contact footer end -->
+
+    <!-- Footer Start  -->
+    <div id="footer"></div>
+    <!-- Footer end -->
+
+    <script src="../../public/js/script.js"></script>
+    <script src="../../public/js/services.js"></script>
+  </body>
+</html>
