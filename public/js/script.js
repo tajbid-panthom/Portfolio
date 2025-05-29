@@ -263,19 +263,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //testimonials section end
 
 // Contact footer section start for all
-fetch("../../views/includes/contactFooter.html")
-  .then((res) => res.text())
-  .then((data) => {
-    document.getElementById("contact-footer").innerHTML = data;
-  });
+
 // Contact footer section end
 
 // Footer section start for all
-fetch("../../views/includes/footer.html")
-  .then((res) => res.text())
-  .then((data) => {
-    document.getElementById("footer").innerHTML = data;
-  });
+
 // JavaScript to update the year in the copyright notice
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("current-year");
